@@ -1,0 +1,157 @@
+# Aagman Overseas - robots.txt
+# Last Updated: March 12, 2024
+
+# ════════════════════════════════════════════════════════
+# GENERAL RULES FOR ALL USER-AGENTS
+# ════════════════════════════════════════════════════════
+
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /blog/
+Allow: /services/
+Allow: /countries/
+
+# Disallow private/admin pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /temp/
+Disallow: /test/
+
+# Disallow sensitive files
+Disallow: /*.txt$
+Disallow: /*.pdf$
+Disallow: /uploads/private/
+Disallow: /cache/
+
+# Disallow duplicate content
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*page=
+Disallow: /*?*session=
+Disallow: /*&*
+Disallow: /search?
+
+# Allow XML sitemap
+Allow: /sitemap.xml
+Allow: /sitemap-index.xml
+
+# Crawl delay (in seconds) - adjust based on server capacity
+Crawl-delay: 1
+
+# Request rate (pages per second)
+Request-rate: 10/1
+
+# ════════════════════════════════════════════════════════
+# GOOGLE SPECIFIC
+# ════════════════════════════════════════════════════════
+
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Crawl-delay: 0
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+
+# Google News (if applicable)
+User-agent: Googlebot-News
+Allow: /
+Allow: /blog/
+
+# ════════════════════════════════════════════════════════
+# BING SPECIFIC
+# ════════════════════════════════════════════════════════
+
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Crawl-delay: 0.5
+
+# ════════════════════════════════════════════════════════
+# SOCIAL MEDIA CRAWLERS
+# ════════════════════════════════════════════════════════
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: PinterestBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ════════════════════════════════════════════════════════
+# BAD BOTS / MALICIOUS CRAWLERS
+# ════════════════════════════════════════════════════════
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SputnikBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Grapeshot
+Disallow: /
+
+# ════════════════════════════════════════════════════════
+# SITEMAP LOCATION
+# ════════════════════════════════════════════════════════
+
+Sitemap: https://www.aagmanoverseas.com/sitemap.xml
+Sitemap: https://www.aagmanoverseas.com/sitemap-blog.xml
+Sitemap: https://www.aagmanoverseas.com/sitemap-countries.xml
+Sitemap: https://www.aagmanoverseas.com/sitemap-news.xml
+
+# ════════════════════════════════════════════════════════
+# COMMENTS FOR REFERENCE
+# ════════════════════════════════════════════════════════
+
+# Format explanation:
+# User-agent: [bot name or * for all]
+# Allow: [path to allow]
+# Disallow: [path to disallow]
+# Crawl-delay: [seconds between requests]
+
+# NOTE: This robots.txt follows best practices for:
+# 1. SEO optimization (allowing important pages)
+# 2. Server load management (crawl delays)
+# 3. Security (blocking admin/private areas)
+# 4. Performance (blocking duplicate content)
+# 5. Spam prevention (blocking bad bots)
+
+# IMPORTANT: 
+# - robots.txt should be placed in the root directory: /robots.txt
+# - Also update Disallow/Allow rules in Google Search Console
+# - Test robots.txt using Google Search Console's Robots.txt Tester Tool
+# - Monitor crawl stats to ensure important pages are being crawled
